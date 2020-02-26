@@ -18,6 +18,10 @@ export const getPage = pageName => {
 		fields: {
             ...page.Fields,
             ...pages.Common.Fields
+        },
+        objects: {
+            ...page.Objects,
+            ...pages.Common.Objects
 		},
 	}
 }

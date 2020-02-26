@@ -29,6 +29,11 @@
     "Search": {
         "Path": "search?q=*&c=USA",
         "Buttons": {},
-        "Fields": {}
+        "Fields": {},
+        "Objects": {
+            "Product": {
+                "CSS": "[class^='link-module__absolute']"
+            }
+        }
     }
 }
