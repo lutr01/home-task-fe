@@ -1,3 +1,7 @@
 {
-    "Search": "search?q=*&c=USA"
+    "Search": {
+        "Path": "search?q=*&c=USA",
+        "Buttons": {},
+        "Fields": {}
+    }
 }
