@@ -1,4 +1,31 @@
 {
+    "Common": {
+        "Buttons": {
+            "Login": {
+                "CSS": ":visible[data-cy='login-button']",
+                "LoggedIn": false
+            },
+            "SubmitLogin": {
+                "CSS": ":visible[type='submit']",
+                "LoggedIn": false
+            }
+        },
+        "Fields": {
+            "Username": {
+                "CSS": "input[name='username']",
+                "LoggedIn": false
+            },
+            "Password": {
+                "CSS": "input[name='password']",
+                "LoggedIn": false
+            }
+        }
+    },
+    "Home": {
+        "Path": "",
+        "Buttons": {},
+        "Fields": {}
+    },
     "Search": {
         "Path": "search?q=*&c=USA",
         "Buttons": {},

@@ -1,8 +1,10 @@
 import pages from './pages.json'
+import { useState } from '../helpers/stateManager.js'
 
 export const goToPage = pageName => {
     const page = getPage(pageName)
     cy.visit(page.path)
+    setNewPage(pageName)
 }
 
 export const getPage = pageName => {
@@ -10,12 +12,27 @@ export const getPage = pageName => {
 	return {
         path: page.Path,
 		buttons: {
-			...page.Buttons,
+            ...page.Buttons,
+            ...pages.Common.Buttons
 		},
 		fields: {
-			...page.Fields,
+            ...page.Fields,
+            ...pages.Common.Fields
 		},
 	}
 }
+
+const [getPageName, setPageName] = useState('Home')
+
+export const getCurrentPage = () => {
+	return getPage(getPageName())
+}
+
+export const setNewPage = newPageName => {
+    setPageName(newPageName)
+}
+
+
+
 
 

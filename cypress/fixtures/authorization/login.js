@@ -1,4 +1,7 @@
 import userData from './userData.json'
+import { clickButton } from '../elements/button.js'
+import { emptyField, enterIntoField } from '../elements/field.js'
+import { waitForAllXhrRequests } from '../helpers/wait.js'
 
 export const loginWithoutUI = () => {
     const request = JSON.stringify({
@@ -17,5 +20,11 @@ export const loginWithoutUI = () => {
 }
 
 export const loginWithUI = () => {
-    
+    clickButton('Login')
+    emptyField('Username')
+    enterIntoField('Username', userData.Username)
+    emptyField('Password')
+    enterIntoField('Password', userData.Password)
+    clickButton('SubmitLogin')
+    waitForAllXhrRequests()
 }
