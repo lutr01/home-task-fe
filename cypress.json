@@ -1,0 +1,6 @@
+{
+  "baseUrl": "https://www.tundra.com/search?q=*&c=USA",
+  "ignoreTestFiles": "*.js",
+  "testFiles": "**/*.{feature, features}",
+  "video": false
+}
