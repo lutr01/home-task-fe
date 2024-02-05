@@ -1,11 +1,13 @@
 {
-  "name": "home-task-fe",
+  "name": "home-task",
   "version": "1.0.0",
-  "description": "cypress with cucumber for fe",
+  "description": "cypress with cucumber for https://www.saucedemo.com/",
   "main": "index.js",
   "scripts": {
     "test": "cypress run --spec \"**/*.feature\"",
-    "test:open": "cypress open"
+    "test:chrome": "cypress run --spec \"**/*.feature\" --browser chrome",
+    "test:firefox": "cypress run --spec \"**/*.feature\" --browser firefox",
+    "test:open": "cypress open --env screenshots=true,mode=\"headed\""
   },
   "repository": {
     "type": "git",
@@ -14,10 +16,15 @@
   "author": "Lu",
   "license": "MIT",
   "dependencies": {
-    "cypress": "^3.7.0",
-    "cypress-cucumber-preprocessor": "^1.16.2"
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "git": "^0.1.5",
+    "typescript": "^5.2.2"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
+  },
+  "devDependencies": {
+    "@cypress/xpath": "^2.0.3",
+    "cypress": "^13.6.4"
   }
 }

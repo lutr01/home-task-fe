@@ -1,19 +1,14 @@
-import { getCurrentPage } from "../pages/page"
-
-export const emptyField = fieldName => {
-    const page = getCurrentPage()
-
-    cy.get(page.fields[fieldName].CSS)
-		.scrollIntoView()
-		.focus()
-		.clear()
-}
+import { getCurrentPage } from "../pages/page";
 
 export const enterIntoField = (fieldName, text) => {
-    const page = getCurrentPage()
+  cy.log(
+    "Step--------------entering into field " + fieldName + " text " + text
+  );
+  const page = getCurrentPage();
+  const locator = page.fields[fieldName];
 
-    cy.get(page.fields[fieldName].CSS)
-		.scrollIntoView()
-		.focus()
-		.type(`${text}`)
-}
+  cy.get(locator.CSS).should("be.enabled");
+  cy.get(locator.CSS).clear();
+  cy.get(locator.CSS).should("be.enabled");
+  cy.get(locator.CSS).scrollIntoView().type(`${text}`);
+};

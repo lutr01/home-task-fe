@@ -1,11 +1,13 @@
+import { When } from "cypress-cucumber-preprocessor/steps";
+import {
+  loginWithUI,
+  logoutWithUI,
+} from "../../fixtures/authorization/login";
 
-import { Given } from 'cypress-cucumber-preprocessor/steps';
-import { loginWithoutUI, loginWithUI } from '../../fixtures/authorization/login';
-
-Given(`I am logged in user`, () => {
-  loginWithoutUI()
+When(`I login as a {string}`, (user) => {
+  loginWithUI(user);
 });
 
-Given(`I log in`, () => {
-    loginWithUI()
-  });
+When(`I log out`, () => {
+  logoutWithUI();
+});

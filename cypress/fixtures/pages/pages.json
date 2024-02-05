@@ -1,39 +1,29 @@
 {
-    "Common": {
-        "Buttons": {
-            "Login": {
-                "CSS": ":visible[data-cy='login-button']",
-                "LoggedIn": false
-            },
-            "SubmitLogin": {
-                "CSS": ":visible[type='submit']",
-                "LoggedIn": false
-            }
-        },
-        "Fields": {
-            "Username": {
-                "CSS": "input[name='username']",
-                "LoggedIn": false
-            },
-            "Password": {
-                "CSS": "input[name='password']",
-                "LoggedIn": false
-            }
-        }
+  "Common": {
+    "Buttons": {
+      "Login": {
+        "CSS": "[type='submit']"
+      },
+      "Menu": {
+        "CSS": "[id='react-burger-menu-btn']"
+      },
+      "Logout": {
+        "CSS": "[id='logout_sidebar_link']"
+      }
     },
-    "Home": {
-        "Path": "",
-        "Buttons": {},
-        "Fields": {}
-    },
-    "Search": {
-        "Path": "search?q=*&c=USA",
-        "Buttons": {},
-        "Fields": {},
-        "Objects": {
-            "Product": {
-                "CSS": "[class^='link-module__absolute']"
-            }
-        }
+    "Fields": {
+      "Username": {
+        "CSS": "[data-test='username']"
+      },
+      "Password": {
+        "CSS": "[data-test='password']"
+      }
     }
+  },
+
+  "Home": {
+    "Path": "https://www.saucedemo.com/",
+    "Buttons": {},
+    "Fields": {}
+  }
 }

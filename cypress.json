@@ -1,6 +1,0 @@
-{
-  "baseUrl": "https://www.tundra.com/",
-  "ignoreTestFiles": "*.js",
-  "testFiles": "**/*.{feature, features}",
-  "video": false
-}

@@ -1,4 +1,10 @@
 {
-    "Username": "test-tundra.9ay15jxl@mailosaur.io",
-    "Password": "test-tundra.9ay15jxl@mailosaur.io"
+  "Standard": {
+    "Username": "standard_user",
+    "Password": "secret_sauce"
+  },
+  "Locked": {
+    "Username": "locked_out_user",
+    "Password": "secret_sauce"
+  }
 }

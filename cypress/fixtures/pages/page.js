@@ -1,42 +1,37 @@
-import pages from './pages.json'
-import { useState } from '../helpers/stateManager.js'
+import pages from "./pages.json";
+import { useState } from "../helpers/stateManager.js";
 
-export const goToPage = pageName => {
-    const page = getPage(pageName)
-    cy.visit(page.path)
-    setNewPage(pageName)
-}
+export const goToPage = (pageName) => {
+  const page = getPage(pageName);
+  cy.visit(page.path);
+  setNewPage(pageName);
+};
 
-export const getPage = pageName => {
-	const page = pages[pageName]
-	return {
-        path: page.Path,
-		buttons: {
-            ...page.Buttons,
-            ...pages.Common.Buttons
-		},
-		fields: {
-            ...page.Fields,
-            ...pages.Common.Fields
-        },
-        objects: {
-            ...page.Objects,
-            ...pages.Common.Objects
-		},
-	}
-}
+export const getPage = (pageName) => {
+  const page = pages[pageName];
+  return {
+    path: page.Path,
+    buttons: {
+      ...page.Buttons,
+      ...pages.Common.Buttons,
+    },
+    fields: {
+      ...page.Fields,
+      ...pages.Common.Fields,
+    },
+  };
+};
 
-const [getPageName, setPageName] = useState('Home')
+const [getPageName, setPageName] = useState("Home");
 
 export const getCurrentPage = () => {
-	return getPage(getPageName())
-}
+  return getPage(getPageName());
+};
 
-export const setNewPage = newPageName => {
-    setPageName(newPageName)
-}
+export const setNewPage = (newPageName) => {
+  setPageName(newPageName);
+};
 
-
-
-
-
+export const checkTextOnThePage = (text) => {
+  cy.contains(text);
+};
