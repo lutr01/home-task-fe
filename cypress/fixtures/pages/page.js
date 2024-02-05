@@ -19,6 +19,10 @@ export const getPage = (pageName) => {
       ...page.Fields,
       ...pages.Common.Fields,
     },
+    selects: {
+      ...page.Selects,
+      ...pages.Common.Selects,
+    },
   };
 };
 

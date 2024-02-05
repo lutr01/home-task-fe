@@ -18,7 +18,8 @@
       "Password": {
         "CSS": "[data-test='password']"
       }
-    }
+    },
+    "Selects": {}
   },
 
   "Home": {
